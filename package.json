@@ -1,10 +1,10 @@
 {
-  "name": "gif.js",
+  "name": "gifjs",
   "version": "0.2.0",
   "description": "JavaScript GIF encoding library",
-  "author": "Johan Nordberg <code@johan-nordberg.com>",
-  "main": "index.js",
-  "repository": "https://github.com/jnordberg/gif.js.git",
+  "author": "coffeebi <merfais.bwq@163.com>",
+  "main": "dist/gif.js",
+  "repository": "git@github.com:merfais/gif.js.git",
   "devDependencies": {
     "browserify": "^13.1.1",
     "coffeeify": "^2.1.0",
