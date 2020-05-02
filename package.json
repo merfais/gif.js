@@ -1,5 +1,5 @@
 {
-  "name": "gifjs",
+  "name": "@coffeeb/gif",
   "version": "0.2.1",
   "description": "JavaScript GIF encoding library",
   "author": "coffeebi <merfais.bwq@163.com>",
