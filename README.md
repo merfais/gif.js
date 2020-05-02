@@ -1,6 +1,8 @@
 
 # gif.js
 
+> fork from [gif.js](https://github.com/jnordberg/gif.js), support webpack loader
+
 JavaScript GIF encoder that runs in your browser.
 
 Uses typed arrays and web workers to render each frame in the background, it's really fast!
@@ -12,13 +14,32 @@ Works in browsers supporting: [Web Workers](http://www.w3.org/TR/workers/), [Fil
 
 ## Usage
 
-Include `gif.js` found in `dist/` in your page. Also make sure to have `gif.worker.js` in the same location.
++ Include `gif.js` found in `dist/` in your page. Also make sure to have `gif.worker.js` in the same location.
 
-```javascript
-var gif = new GIF({
-  workers: 2,
-  quality: 10
-});
+  ```javascript
+  const gif = new window.GIF({
+    workerScript: './gif/workers.js'  // repalce to your public path
+  });
+  ```
+
++ with [webpack worker](https://webpack.js.org/loaders/worker-loader/) loader
+
+  ```shell
+  npm i -S @coffeeb/gif
+
+  ```
+
+  ```javaScript
+
+  import GIF from '@coffeeb/gif'
+  import Worker from 'worker-loader!@coffeeb/gif/dist/gif.worker.js'
+
+  const gif = new GIF({
+    worker: new Worker()
+  })
+  ```
+
+```javaScript
 
 // add an image element
 gif.addFrame(imageElement);
